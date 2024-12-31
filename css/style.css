@@ -1,0 +1,252 @@
+:root {
+  /*primary*/
+
+  --Light-red: #ff5757;
+  --Orangey-yellow: #ffb01f;
+  --Green-teal: #00bd91;
+  --Cobalt-blue: #1125d4;
+
+  /*gradients*/
+  --Light-slate-blue-background: #7857ff;
+  --Light-royal-blue-background: #2e2be9;
+
+  --Violet-blue-circle: #4e21ca;
+  --Persian-blue-circle: #2421ca00;
+
+  /*neutral*/
+  --White: #ffffff;
+  --Pale-blue: #ebf1ff;
+  --Light-lavender: #c8c7ff;
+  --Dark-gray-blue: #303b5a;
+
+  --fuente-principal: "Hanken Grotesk", serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.8rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* summary */
+
+.summary {
+  margin-top: 0;
+}
+
+/* result */
+
+.result {
+  background: linear-gradient(
+    to top,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--Light-lavender);
+  border-radius: 0 0 3rem 3rem;
+}
+
+.result__title {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.result__result {
+  background: linear-gradient(
+    to top,
+    var(--Persian-blue-circle),
+    var(--Violet-blue-circle)
+  );
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result__num {
+  color: var(--White);
+  font-weight: 900;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.result__ofNum {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--Light-slate-blue-background);
+  margin-top: -0.5rem;
+}
+
+.result__heading {
+  color: var(--White);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.result__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  width: 58%;
+  margin-bottom: 4rem;
+  color: var(--Light-lavender);
+}
+
+/* summary class */
+
+.summary__class {
+  padding: 1rem 4rem;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position: 1.5rem center;
+  font-weight: 700;
+}
+
+.item:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.2);
+  color: var(--Light-red);
+  background-image: url(/assets/images/icon-reaction.svg);
+}
+.item:nth-child(2) {
+  background-color: hsl(39, 100%, 56%, 0.2);
+  color: var(--Orangey-yellow);
+  background-image: url(/assets/images/icon-memory.svg);
+}
+.item:nth-child(3) {
+  background-color: hsl(166, 100%, 37%, 0.2);
+  color: var(--Green-teal);
+  background-image: url(/assets/images/icon-verbal.svg);
+}
+.item:nth-child(4) {
+  background-color: hsl(234, 85%, 45%, 0.2);
+  color: var(--Cobalt-blue);
+  background-image: url(/assets/images/icon-visual.svg);
+}
+
+.item__title {
+  margin: 0 0 0 4rem;
+}
+
+.item__number {
+  margin: 0;
+  color: var(--Cobalt-blue);
+  font-weight: 900;
+
+  span {
+    color: var(--Light-lavender);
+  }
+}
+
+/* summary items and btn */
+
+.summary__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--Violet-blue-circle);
+  cursor: pointer;
+}
+
+/* query */
+
+@media (min-width: 769px) {
+  [class*="contenedor"] {
+    width: 85%;
+  }
+
+  .summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 3rem;
+  }
+
+  .summary__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 3rem;
+  }
+
+  .result {
+    border-radius: 3rem;
+  }
+
+  .result {
+    background: linear-gradient(
+      to top,
+      rgb(40, 38, 177) 10%,
+      rgba(18, 15, 184, 1) 100%
+    );
+  }
+
+  .result__result {
+    background: linear-gradient(rgb(22, 20, 150) 10%, rgb(27, 24, 207) 100%);
+  }
+
+  .summary__class {
+    box-shadow: 0.5rem 0.5rem 1rem #ccccee;
+    border-radius: 0 3rem 3rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  [class*="contenedor"] {
+    width: 45%;
+  }
+
+  .result {
+    width: 70%;
+  }
+
+  .summary__class {
+    margin-left: -14rem;
+    margin-right: 14rem;
+  }
+}
